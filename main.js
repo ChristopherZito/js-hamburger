@@ -5,7 +5,7 @@ const hamMenu = document.querySelector(".hamburger-menu");
 const xMenu = document.querySelector(".fa-times");
 
 
-hamico.addEventListener( "click",
+hamico.addEventListener("click",
 
     function()
     {
@@ -13,11 +13,20 @@ hamico.addEventListener( "click",
     }
 
 );
-xMenu.addEventListener( "click",
+xMenu.addEventListener("click",
 
     function()
     {
         hamMenu.style.display = "none";
     }
 
+);
+
+window.addEventListener('resize',
+
+    function(){
+    if (innerWidth > 1000) {
+            hamMenu.style.display = "none";
+        };
+    }
 );
